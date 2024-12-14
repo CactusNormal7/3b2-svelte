@@ -38,3 +38,8 @@ export const handleRedirectCallback = async () => {
     const client = await initAuth0();
     return await client.handleRedirectCallback();
 };
+
+export const register = async () => {
+    const client = await initAuth0();
+    await client.loginWithRedirect();
+};
