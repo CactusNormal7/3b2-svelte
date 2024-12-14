@@ -1,11 +1,12 @@
 <script lang="ts">
-	// import { PUBLIC_CONVEX_URL } from '$env/static/public';
+	import { PUBLIC_CONVEX_URL } from '$env/static/public';
 	import { setupConvex } from 'convex-svelte';
 	const { children } = $props();
 	import { onMount } from 'svelte';
 	import { initAuth0, isAuthenticated, getUser, login, logout, register } from '$lib/auth';
 
-	setupConvex('https://little-quail-162.convex.cloud');
+	// setupConvex('https://little-quail-162.convex.cloud');
+	setupConvex(PUBLIC_CONVEX_URL);
 	let user: any;
 	let authenticated = false;
 	
